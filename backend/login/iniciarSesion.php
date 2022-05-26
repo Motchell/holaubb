@@ -8,6 +8,9 @@ $alumno = mysqli_query($con, $query);
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
+$hostHeader = $_SERVER['HTTP_HOST'];
+$phpHeader = 'index.php';
+$urlHeader = "https://$hostHeader/$phpHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
 
@@ -28,7 +31,7 @@ if (mysqli_num_rows($alumno) == 1) {
   } 
 
   session_write_close();
-  header('Location: ../holaubb/frontend/inicio.php');
+  header('Location: $urlHeader');
 
 } else {
   session_id("notlogged");
@@ -37,5 +40,10 @@ if (mysqli_num_rows($alumno) == 1) {
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
-	header('Location: ../holaubb/index.php');
+	header("Location: $urlHeader");
 }
+
+/*$hostHeader = $_SERVER['HTTP_HOST'];
+            $phpHeader = 'index.php';
+            $urlHeader = "https://$hostHeader/$phpHeader";        
+            header("Location: $urlHeader");*/
