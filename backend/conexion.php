@@ -5,7 +5,7 @@ $db_user = "G12taller";
 $db_pass = "G12taller1102";
 $db_name = "G12taller_bd";
 echo "eco 2 ";
-
+var_dump(function_exists('mysqli_connect'));
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 echo "eco 3 ";
 if (mysqli_connect_errno()) {
