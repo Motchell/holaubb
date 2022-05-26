@@ -11,6 +11,7 @@ $tutor = mysqli_query($con, $queryTutor);
 $hostHeader = $_SERVER['HTTP_HOST'];
 $phpHeader = 'index.php';
 $urlHeader = "https://$hostHeader/$phpHeader";
+echo "$urlHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
 
