@@ -8,7 +8,7 @@ $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
 $alumno = mysqli_query($con, $query);
 
-echo("mysqli_num_rows($alumno)");
+echo "mysqli_num_rows($alumno)";
 
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
@@ -17,7 +17,7 @@ echo 'hola';
 
 if (mysqli_num_rows($alumno) == 1) {
 
-  // sesión usuario
+  // sesión usuario header('Location: ../index.php');
   session_id("usuario");
   session_start();
   $fila = mysqli_fetch_array($alumno);
