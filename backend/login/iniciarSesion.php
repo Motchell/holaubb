@@ -1,4 +1,5 @@
 <?php
+echo "hola";
 require_once("./backend/conexion.php");
 $rut = $_POST["rut_alu"];
 
