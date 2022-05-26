@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Noto+Sans+JP:wght@300&display=swap');
+        
+:root{
+    --white: #fff;
+    --prim-color: #E1ECF9;
+    --sec-color: #609CE1;
+    --ter-color: #236AB9;
+    --qua-color: #133863;
+    --qui-color: #091D34;
+    --ubb-color: #002D54;
+}
+
+body{
+    background: var(--ubb-color) !important;
+    /*background: linear-gradient(0deg, rgba(255,255,255,0.19659201571253504) 0%, rgba(190,20,47,0.1) 14%) !important;*/
+    font-family: 'Lora', serif  !important;
+}
+
+footer{
+    background-color: #091d34;
+}
+
+.texto-bar{
+    color: #091d34 !important;
+}
+
+.bg-light{
+    background-color: rgba(255,255,255,0.3) !important;
+}
+
+.container-bg{
+    background-color:  var(--white) !important;
+    border-radius: 0 0 100% 100%;
+    width: 100% !important;
+}
+
+.comentario{
+    background-color: #133863;
+    border-radius: 3%;
+}
+
+a{
+    color: white !important;
+}
+
+.hover-primary{
+    color:white !important;
+}
+.hover-primary:hover{
+    color: var(--prim-color) !important;
+}
+
+.navbar a:hover{
+    color: var(--ter-color) !important;
+    text-shadow: 0 0 8px var(--sec-color);
+}
+
+.mostrarnt{
+    display: none !important;
+}
+
+.btn-bg{
+    background-color: #236ab9 !important;
+}
+
+.btn-a{
+    background-color: #609CE1 !important;
+}
+
+.ul-drop{
+    background-color: #609CE1 !important;
+}
+
+.borde{
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.ajustable{
+    display: block;
+    height: auto;
+}
+
+/*estilos imágenes*/
+
+.img-size{
+    width: auto;
+    height: 6vh;
+}
+
+.bttn-size{
+    width: auto;
+    height: 3vh;
+}
+
+.bttn-bg{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.cont-ubb-bg{
+    width: auto;
+    height: 32vh;
+}
+
+/*estilo escritura automática de la navbar*/
+.letras-auto {
+    overflow: hidden;
+    border-right: .08em solid;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .125em;
+    animation:
+    typing 2s steps(8, end),
+    blink-caret 1s step-end infinite;
+    overflow: hidden;
+    text-decoration: underline;  
+}    
+       
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+         
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--ubb-color); }
+}
