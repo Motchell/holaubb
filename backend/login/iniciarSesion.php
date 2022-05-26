@@ -4,7 +4,7 @@ $hostHeader = $_SERVER['HTTP_HOST'];
 $phpHeader = 'index.php';
 $urlHeader = "https://$hostHeader/$phpHeader";
 echo "$urlHeader";
-include('../conexion.php');
+include("https://$hostHeader/holaubb/backend/conexion.php");
 echo "hola";
 $rut = $_POST["rut_alu"];
 
