@@ -1,5 +1,6 @@
 <?php
-require_once(".../conexion.php");
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once(__ROOT__.'conexion.php');
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
