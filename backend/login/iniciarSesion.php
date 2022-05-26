@@ -2,7 +2,7 @@
 $hostHeader = $_SERVER['HTTP_HOST'];
 $urlHeader = "https://$hostHeader/holaubb/";
 echo "$hostHeader";
-include_once("../conexion.php");
+require_once("../conexion.php");
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
