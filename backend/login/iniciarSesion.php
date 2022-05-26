@@ -1,7 +1,6 @@
 <?php
 $hostHeader = $_SERVER['HTTP_HOST'];
-$phpHeader = 'index.php';
-$urlHeader = "https://$hostHeader/holaubb/$phpHeader";
+$urlHeader = "https://$hostHeader/holaubb/index.php";
 
 include("https://$hostHeader/holaubb/backend/conexion.php");
 
@@ -12,7 +11,7 @@ $alumno = mysqli_query($con, $query);
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
-
+echo 'hola';
 
 if (mysqli_num_rows($alumno) == 1) {
 
