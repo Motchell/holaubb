@@ -32,7 +32,7 @@ if (mysqli_num_rows($alumno) == 1) {
   } 
 
   session_write_close();
-  header('Location: $urlHeader');
+  //header("Location: $urlHeader");
 
 } else {
   session_id("notlogged");
@@ -41,7 +41,7 @@ if (mysqli_num_rows($alumno) == 1) {
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
-	header("Location: $urlHeader");
+	//header("Location: $urlHeader");
 }
 
 /*$hostHeader = $_SERVER['HTTP_HOST'];
