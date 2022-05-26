@@ -1,5 +1,4 @@
 <?php
-
 $db_host = "mysqltrans.face.ubiobio.cl";
 $db_user = "G12taller";
 $db_pass = "G12taller1102";
