@@ -28,7 +28,7 @@ if (mysqli_num_rows($alumno) == 1) {
   } 
 
   session_write_close();
-  header('Location: ../../frontend/inicio.php');
+  header('Location: ./holaubb/frontend/inicio.php');
 
 } else {
   session_id("notlogged");
@@ -37,5 +37,5 @@ if (mysqli_num_rows($alumno) == 1) {
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
-	header('Location: ../../index.php');
+	header('Location: ./holaubb/index.php');
 }
