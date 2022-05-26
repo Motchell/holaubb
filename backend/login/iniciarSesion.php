@@ -1,12 +1,14 @@
 <?php
 $hostHeader = $_SERVER['HTTP_HOST'];
-$urlHeader = "https://$hostHeader/holaubb/index.php";
-
+$urlHeader = "https://$hostHeader/holaubb/";
+echo "$hostHeader";
 include("https://$hostHeader/holaubb/backend/conexion.php");
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
 $alumno = mysqli_query($con, $query);
+
+echo("mysqli_num_rows($alumno)");
 
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
@@ -32,7 +34,7 @@ if (mysqli_num_rows($alumno) == 1) {
   } 
 
   session_write_close();
-  header("Location: $urlHeader");
+  header("Location: $urlHeader/frontend/inicio.php");
 
 } else {
   session_id("notlogged");
@@ -41,7 +43,7 @@ if (mysqli_num_rows($alumno) == 1) {
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
-	header("Location: $urlHeader");
+	header("Location: $urlHeader/index.php");
 }
 
 /*$hostHeader = $_SERVER['HTTP_HOST'];
