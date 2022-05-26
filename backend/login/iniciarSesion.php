@@ -1,6 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'conexion.php');
+require_once('/var/www/html/holaubb/backend/conexion.php');
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
