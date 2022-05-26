@@ -1,6 +1,7 @@
 <?php
 echo "hola";
-include("./../../../conexion.php");
+include('../conexion.php');
+echo "hola";
 $rut = $_POST["rut_alu"];
 
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
