@@ -1,5 +1,9 @@
 <?php
 echo "hola";
+$hostHeader = $_SERVER['HTTP_HOST'];
+$phpHeader = 'index.php';
+$urlHeader = "https://$hostHeader/$phpHeader";
+echo "$urlHeader";
 include('../conexion.php');
 echo "hola";
 $rut = $_POST["rut_alu"];
@@ -10,10 +14,7 @@ $alumno = mysqli_query($con, $query);
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
-$hostHeader = $_SERVER['HTTP_HOST'];
-$phpHeader = 'index.php';
-$urlHeader = "https://$hostHeader/$phpHeader";
-echo "$urlHeader";
+
 
 if (mysqli_num_rows($alumno) == 1) {
 
