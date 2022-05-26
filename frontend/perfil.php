@@ -19,6 +19,5 @@
         include('./header.php');
     ?>
 
-    <h1>sexoperfil</h1>
 </body>
 </html>

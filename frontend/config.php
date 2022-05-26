@@ -11,6 +11,5 @@
     <?php
         include('./header.php');
     ?>
-    <h1>sexoconfig</h1>
 </body>
 </html>

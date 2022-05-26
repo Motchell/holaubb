@@ -1,5 +1,5 @@
 <?php
-require_once('backend\conexion.php');
+include_once('backend\conexion.php');
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
