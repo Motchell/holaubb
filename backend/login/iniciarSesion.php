@@ -1,8 +1,5 @@
 <?php
-$hostHeader = $_SERVER['HTTP_HOST'];
-$urlHeader = "https://$hostHeader/holaubb/";
-echo "$hostHeader";
-require_once('../conexion.php');
+require_once("../conexion.php");
 
 $rut = $_POST["rut_alu"];
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
@@ -13,7 +10,9 @@ echo "mysqli_num_rows($alumno)";
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
-echo 'hola';
+$hostHeader = $_SERVER['HTTP_HOST'];
+$urlHeader = "https://$hostHeader/holaubb/";
+echo "$hostHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
 

@@ -32,7 +32,7 @@ session_start();
                 <div class="card-header">
                     <h1>Login</h1>
                 </div>
-                <form class="p-4" method="POST" action="/holaubb/backend/login/iniciarSesion.php">
+                <form class="p-4" method="POST" action="holaubb/backend/login/iniciarSesion.php">
                     <div class="form-group">
                         <label for="">RUT</label>
                         <input type="text" class="form-control" maxlength="12" name="rut_alu">
