@@ -1,10 +1,10 @@
 <?php
 require_once("../conexion.php");
 $rut = $_POST["rut_alu"];
-$query = "SELECT * FROM alumno WHERE rut_alu=$rut";
+$query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
 $alumno = mysqli_query($con, $query);
 
-$queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu=$rut";
+$queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
 $hostHeader = $_SERVER['HTTP_HOST'];
