@@ -10,7 +10,7 @@ $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_t
 $tutor = mysqli_query($con, $queryTutor);
 
 $hostHeader = $_SERVER['HTTP_HOST'];
-$urlHeader = "https://$hostHeader/holaubb/";
+$urlHeader = "https://$hostHeader/holaubb";
 echo "$hostHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
@@ -43,8 +43,3 @@ if (mysqli_num_rows($alumno) == 1) {
 	session_write_close();
 	header("Location: $urlHeader/index.php");
 }
-
-/*$hostHeader = $_SERVER['HTTP_HOST'];
-            $phpHeader = 'index.php';
-            $urlHeader = "https://$hostHeader/$phpHeader";        
-            header("Location: $urlHeader");*/
