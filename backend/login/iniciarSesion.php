@@ -35,7 +35,7 @@ if (mysqli_num_rows($alumno) == 1) {
 } else {
   session_id("notlogged");
 	session_start();
-	$_SESSION['mensaje'] = 'Usuario incorrecto.';
+	$_SESSION['mensaje'] = "Usuario incorrecto. su rut: $rut";
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
