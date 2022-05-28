@@ -11,7 +11,7 @@ $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_t
 $tutor = mysqli_query($con, $queryTutor);
 
 $hostHeader = $_SERVER['HTTP_HOST'];
-$urlHeader = "https://$hostHeader/holaubb";
+$urlHeader = "http://$hostHeader/holaubb";
 echo "$hostHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
