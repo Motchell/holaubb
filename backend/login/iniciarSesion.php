@@ -1,6 +1,7 @@
 <?php
 require_once("../conexion.php");
 $rut = $_POST["rut_alu"];
+echo("is parte1");
 $query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
 $alumno = mysqli_query($con, $query);
 
