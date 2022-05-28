@@ -3,6 +3,9 @@
     session_id("usuario");
     session_start();
     session_write_close();
+    $hostHeader = $_SERVER['HTTP_HOST'];
+    $urlHeader = "http://$hostHeader/holaubb";
+
     include('../conexion.php');
     if(!empty($_POST["nomAct"]) && !empty($_POST["descAct"]) && !empty($_POST["fechaIni"] && !empty($_POST["fechaFin"]))) {
         if(strlen($_POST["nomAct"])<=120 && strlen($_POST["descAct"])<=500){
@@ -20,12 +23,8 @@
             unset($_POST["fechaIni"]);
             unset($_POST["fechaFin"]);
 
-            /*$hostHeader = $_SERVER['HTTP_HOST'];
-            $phpHeader = 'index.php';
-            $urlHeader = "https://$hostHeader/$phpHeader";        
-            header("Location: $urlHeader");*/
         }
     }
-    header("Location: http://localhost/holaubb/frontend/actividades.php");
+    header("Location: $urlHeader/frontend/actividades.php");
     die();
 ?>

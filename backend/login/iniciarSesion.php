@@ -7,8 +7,6 @@ $alumno = mysqli_query($con, $query);
 $queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
 $tutor = mysqli_query($con, $queryTutor);
 
-$hostHeader = $_SERVER['HTTP_HOST'];
-$urlHeader = "http://$hostHeader/holaubb";
 echo "$hostHeader";
 
 if (mysqli_num_rows($alumno) == 1) {
@@ -35,7 +33,7 @@ if (mysqli_num_rows($alumno) == 1) {
 } else {
   session_id("notlogged");
 	session_start();
-	$_SESSION['mensaje'] = "Usuario incorrecto. su rut: $rut";
+	$_SESSION['mensaje'] = 'Usuario incorrecto.';
 	$_SESSION['sub_mensaje'] = 'Por favor inténtelo nuevamente.';
 	$_SESSION['tipo'] = 'danger';
 	session_write_close();
