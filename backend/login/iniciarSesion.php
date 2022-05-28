@@ -7,7 +7,7 @@ $alumno = mysqli_query($con, $query);
 
 echo "mysqli_num_rows($alumno)";
 
-$queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu='$rut'";
+$queryTutor = "SELECT * FROM alumno INNER JOIN tutor ON alumno.id_alu=tutor.id_tutor WHERE rut_alu=".$rut."";
 $tutor = mysqli_query($con, $queryTutor);
 
 $hostHeader = $_SERVER['HTTP_HOST'];
