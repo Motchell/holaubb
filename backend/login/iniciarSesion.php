@@ -2,7 +2,7 @@
 require_once("../conexion.php");
 $rut = $_POST["rut_alu"];
 echo("is parte1: $rut");
-$query = "SELECT * FROM alumno WHERE rut_alu='$rut'";
+$query = "SELECT * FROM alumno WHERE rut_alu='".$rut."'";
 $alumno = mysqli_query($con, $query);
 
 echo "mysqli_num_rows($alumno)";
