@@ -24,6 +24,6 @@
 
         }
     }
-    header("Location: $urlHeader/frontend/actividades.php");
+    header("Location: $urlHeader/frontend/actividades.php?sendActividad=3");
     die();
 ?>

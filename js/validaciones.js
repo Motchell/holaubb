@@ -31,6 +31,10 @@ function validarChar(texto1, texto2){
     if((texto1.length >=0 && texto1.length <=120) && (texto2.length>=0 && texto2.length<=500)){
         var salida = true;     
     }
+    if((texto1.length == 0 && texto2.length == 0) || (((texto1 == "" || texto1 == " ") && (texto2 == "" || texto2 == " ")))){
+        alert('Por favor, verifique que las casillas contengan datos válidos.');
+        var salida = false;
+    }
 
     return salida;
 }
@@ -41,11 +45,20 @@ function verificarFecha(fechaInicial, fechaFinal) {
     const feFin = new Date(document.getElementById("#"+fechaFinal).value);
     feIni.setDate(feIni.getDate() + dia);
     feFin.setDate(feFin.getDate() + dia);
-    if (final < inicial) {
+    if (feFin < feIni) {
         alert("La fecha final no puede ser antes de la fecha inicial");
         return false
     }
 }
+
+function validarForm(char, fecha){
+    if(fecha == true && char == true){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 
 /* CÓDIGO OBSOLETO
 const elemento1 = document.querySelector("#divactividad");

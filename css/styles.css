@@ -59,8 +59,8 @@ a{
     display: none !important;
 }
 
-.btn-bg{
-    background-color: #236ab9 !important;
+.btn-cursor{
+    cursor: pointer;
 }
 
 .btn-a{
@@ -82,6 +82,9 @@ a{
     height: auto;
 }
 
+.resp-table{
+    overflow-x: auto;
+}
 /*estilos imágenes*/
 
 .img-size{
