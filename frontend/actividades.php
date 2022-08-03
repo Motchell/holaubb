@@ -154,9 +154,9 @@
                                                 <div class="m-1">
                                                     <div class="form-check">
                                                         <input class="form-check-input box-chk" type="checkbox" name="alumnosArr[]" value="<?php echo $id_tutorado?>">
-                                                        <label class="form-check-label" for="alumnosArr">
+                                                        <p class="form-check-label" for="alumnosArr">
                                                             <?php echo $nom_tutorado?>
-                                                        </label>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             <?php 
