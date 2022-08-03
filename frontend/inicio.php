@@ -44,9 +44,9 @@ session_write_close();
                             <thead>
                                 <tr>
                                     <th scope="col">Nombre</th>
-                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Descripción</th>
                                     <th scope="col">Fecha Inicio</th>
-                                    <th scope="col">Fecha Termino</th>
+                                    <th scope="col">Fecha Término</th>
                                 </tr>
                             </thead>
                             <tbody>
