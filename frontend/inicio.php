@@ -37,7 +37,7 @@ session_write_close();
                 <div class="col-md-9 mt-3">
                     <div class="card">
                         <div class="card-header">
-                            <p>Tienes <?php echo $numact?> en curso</p>
+                            <p>Tienes <?php echo $numact?> actividad(es) en curso</p>
                         </div>
                         <div class="resp-table p-4">
                         <table class="table table-responsive align-middle align-text-center">
