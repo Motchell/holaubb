@@ -148,7 +148,7 @@
                                         <div class="modal-body">
                                             <?php
                                                 while(($rowsT = mysqli_fetch_array($tuto))){
-                                                    $nom_tutorado = $rowsT['nom_alu'];
+                                                    $nom_tutorado = utf8_encode($rowsT['nom_alu']);
                                                     $id_tutorado = $rowsT['id_tutorado'];                                               
                                             ?>
                                                 <div class="m-1">
