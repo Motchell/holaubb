@@ -14,6 +14,7 @@ if (!isset($_SESSION['nombre'])) {
 	session_write_close();
 	header('Location: ../index.php');
 }
+header('Content-Type: text/html; charset=UTF-8');
 ?>
 
 <!DOCTYPE html>
