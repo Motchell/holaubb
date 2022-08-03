@@ -17,8 +17,7 @@
     </style>
     
 </head>
-<body>
-    <!--Inicio php-->
+<!--Inicio php-->
     <?php
         include('./header.php');
         include_once('../backend/conexion.php');
@@ -28,6 +27,8 @@
         $act = mysqli_query($con, $actividades);
     ?>
     <!--Fin php-->
+<body>
+    
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-5 mt-3">
