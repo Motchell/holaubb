@@ -61,9 +61,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Nombre</th>
-                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Descripción</th>
                                     <th scope="col">Fecha Inicio</th>
-                                    <th scope="col">Fecha Termino</th>
+                                    <th scope="col">Fecha Término</th>
                                     <th scope="col" colspan="2">Operaciones</th>
                                 </tr>
                             </thead>
