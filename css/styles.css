@@ -138,9 +138,9 @@ a{
     justify-content: center;
 }
 
-.cardProfile{
-    width: 600px;
-    height: 620px;
+.card {
+    width: 700px;
+    height: 740px;
     background: #ffffff;
     border-radius: 10px;
     display: flex;
