@@ -45,14 +45,14 @@ header('Content-Type: text/html; charset=UTF-8');
                     
                     <a class="navbar-brand align-self-center texto-bar me-5-md"><h1 class="letras-auto">HolaUBB<img class="img-size" src="/holaubb/assets/hello2.png"></h1></a>
                     
-                    <a class="nav-link texto-bar align-self-center ms-5-md" id="inicio" href="/holaubb/frontend/inicio.php"><img class="img-size" src="/holaubb/assets/hogar.png"></a>
+                    <a class="nav-link texto-bar align-self-center ms-5-md" id="inicio" href="/holaubb/frontend/inicio.php" title="Inicio"><img class="img-size" src="/holaubb/assets/hogar.png"></a>
                     <?php if ($_SESSION["esAdmin"]) : ?>
-                        <a class="nav-link texto-bar align-self-center" id="actividad" href="/holaubb/frontend/actividades.php"><img class="img-size" src="/holaubb/assets/activities.png"></a>
+                        <a class="nav-link texto-bar align-self-center" id="actividad" href="/holaubb/frontend/actividades.php" title="Actividades"><img class="img-size" src="/holaubb/assets/activities.png"></a>
 				    <?php endif; ?>
-                    <a class="nav-link texto-bar align-self-center" id="chat" href="/holaubb/frontend/chat.php"><img class="img-size" src="/holaubb/assets/chat.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="perfil" href="/holaubb/frontend/perfil.php"><img class="img-size" src="/holaubb/assets/profile-user.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="configurar" href="/holaubb/frontend/config.php"><img class="img-size" src="/holaubb/assets/settings.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="exit" href="/holaubb/backend/login/cerrarSesion.php"><img class="img-size" src="/holaubb/assets/logout.png"></a>
+                    <a class="nav-link texto-bar align-self-center" id="chat" href="/holaubb/frontend/chat.php" title="Chats"><img class="img-size" src="/holaubb/assets/chat.png"></a>
+                    <a class="nav-link texto-bar align-self-center" id="perfil" href="/holaubb/frontend/perfil.php" title="Perfil"><img class="img-size" src="/holaubb/assets/profile-user.png"></a>
+                    <a class="nav-link texto-bar align-self-center" id="configurar" href="/holaubb/frontend/config.php" title="Configuración"><img class="img-size" src="/holaubb/assets/settings.png"></a>
+                    <a class="nav-link texto-bar align-self-center" id="exit" href="/holaubb/backend/login/cerrarSesion.php" title="Cerrar Sesión"><img class="img-size" src="/holaubb/assets/logout.png"></a>
                     
                 </div>
             </div>

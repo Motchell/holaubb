@@ -27,7 +27,6 @@ session_start();
 
     <div class="container-sm my-5">
         <div class="row justify-content-center">
-        <div class="col-5">
             <div class="card">
                 <div class="card-header">
                     <h1>Login</h1>
@@ -40,8 +39,7 @@ session_start();
                     </div>
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                 </form>
-            </div>  
-        </div>
+            </div>
       </div>    
 
     <!-- Alerta para index -->
