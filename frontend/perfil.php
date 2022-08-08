@@ -28,7 +28,9 @@
             </div>
             <div class="card-tittle">
                 <h2><?php echo utf8_encode($row['nom_alu']);?></h2>
-                <p style="text-align: justify;"><?php echo utf8_encode($row['autodesc_alu']);?></p>
+                <p><?php echo utf8_encode($row['gen_alu']);?></p>
+            </div>
+            <div class="content mb-3">    
                 <p><?php echo utf8_encode($row['carrera_alu'])?></p>
                 <p><?php echo utf8_encode($row['correo_alu']);?></p>
                 <p style="text-align: justify;"><?php echo utf8_encode($row['autodesc_alu']);?></p>
