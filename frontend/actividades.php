@@ -173,10 +173,6 @@
                                 </div>
                             </div>
 
-                            <?php
-                                }
-                            ?> 
-
                             <!--MODAL ELIMINAR ACTIVIDAD-->
 
                             <div class="modal fade" id="ModalDelete<?php echo$id_act?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -198,7 +194,11 @@
                                     </form>
                                 </div>
                             </div>
-                                
+
+                            <?php
+                                }
+                            ?> 
+
                             </tbody>
                         </table>
                     </div>
