@@ -37,13 +37,13 @@
                                         <img src="../assets/profile-user.png" class="profile-search"alt="">
                                     </div>
                                     <div class="col-4">
-                                        <?php echo $alu_name;?>
+                                        <?php echo utf8_encode($alu_name);?>
                                     </div>
                                     <div class="col-4">
-                                        <?php echo $alu_gen;?>
+                                        <?php echo utf8_encode($alu_gen);?>
                                     </div>
                                     <div class="col-3">
-                                        <?php echo $alu_carr;?>
+                                        <?php echo utf8_encode($alu_carr);?>
                                     </div>
                                 </div>
                                 
