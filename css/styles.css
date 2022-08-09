@@ -138,9 +138,9 @@ a{
     justify-content: center;
 }
 
-.cardProfile {
-    width: 700px;
-    height: 740px;
+.cardProfile{
+    width: 600px;
+    height: 620px;
     background: #ffffff;
     border-radius: 10px;
     display: flex;
@@ -158,10 +158,23 @@ a{
     justify-content: center;
 }
 
-.cardProfile img{
+.cardProfile .card-headerProfile img{
     height: 200px;
     width: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 5px;
+}
+
+.profile-search{
+    height: 5.5vh;
+    width: auto;
+}
+
+.danger-signal{
+    border-radius: 0% !important;
+    align-items: center;
+    justify-content: center;
+    height: 25.5vh;
+    width: auto;
 }

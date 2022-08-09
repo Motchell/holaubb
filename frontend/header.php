@@ -35,7 +35,7 @@ header('Content-Type: text/html; charset=UTF-8');
     </style>
 </head>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light header-color container-bg">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light header-color container-bg">
         <div class="container-fluid justify-content-center">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,9 +53,10 @@ header('Content-Type: text/html; charset=UTF-8');
                     <a class="nav-link texto-bar align-self-center" id="perfil" href="/holaubb/frontend/perfil.php" title="Perfil"><img class="img-size" src="/holaubb/assets/profile-user.png"></a>
                     <a class="nav-link texto-bar align-self-center" id="configurar" href="/holaubb/frontend/config.php" title="Configuración"><img class="img-size" src="/holaubb/assets/settings.png"></a>
                     <a class="nav-link texto-bar align-self-center" id="exit" href="/holaubb/backend/login/cerrarSesion.php" title="Cerrar Sesión"><img class="img-size" src="/holaubb/assets/logout.png"></a>
-
-                    <input type="text" class="form-control align-self-center" placeholder="Buscar Usuario" aria-label="Buscar usuario" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary align-self-center" type="button" id="button-addon2"><img class="search" src="/holaubb/assets/search.png" alt=""></button>
+                    <form class="align-self-center" method="GET" action="/holaubb/frontend/busqueda.php">
+                        <input type="text" class=" align-self-center" placeholder="Buscar Usuario" aria-label="Buscar usuario" aria-describedby="button-addon2" name="result">
+                        <button class="btn btn-outline-secondary align-self-center" type="submit" id="button-addon2" name="search"><img class="search" src="/holaubb/assets/search.png" alt=""></button>
+                    </form>
                 </div>
             </div>
         </div>
