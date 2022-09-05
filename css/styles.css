@@ -87,6 +87,11 @@ a{
     height: 6vh;
 }
 
+.centrar-head{
+    display: block;
+    margin: auto;
+}
+
 .search{
     width: auto;
     height: 3vh;
