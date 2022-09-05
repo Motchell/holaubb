@@ -34,7 +34,7 @@ session_start();
                 <form class="p-4" method="POST" action="./backend/login/iniciarSesion.php">
                     <div class="form-group">
                         <label for="">RUT</label>
-                        <input type="text" class="form-control" maxlength="12" name="rut_alu">
+                        <input type="text" id="rutInput" class="form-control" maxlength="12" name="rut_alu">
                         <small id="rutHelp" class="form-text text-muted">Con puntos y guión.</small>
                     </div>
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
@@ -65,6 +65,25 @@ session_start();
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('rutInput').addEventListener('input', function(evt) {
+    let value = this.value.replace(/\./g, '').replace('-', '');
+    
+    if (value.match(/^(\d{2})(\d{3}){2}(\w{1})$/)) {
+        value = value.replace(/^(\d{2})(\d{3})(\d{3})(\w{1})$/, '$1.$2.$3-$4');
+    }
+    else if (value.match(/^(\d)(\d{3}){2}(\w{0,1})$/)) {
+        value = value.replace(/^(\d)(\d{3})(\d{3})(\w{0,1})$/, '$1.$2.$3-$4');
+    }
+    else if (value.match(/^(\d)(\d{3})(\d{0,2})$/)) {
+        value = value.replace(/^(\d)(\d{3})(\d{0,2})$/, '$1.$2.$3');
+    }
+    else if (value.match(/^(\d)(\d{0,2})$/)) {
+        value = value.replace(/^(\d)(\d{0,2})$/, '$1.$2');
+    }
+    this.value = value;
+    });
+  </script>
 </body>
 
 </html>

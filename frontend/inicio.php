@@ -19,15 +19,35 @@ session_write_close();
     <title>Inicio</title>
 </head>
 <body>
-<?php
+    <?php
         include('./header.php');
         include_once('../backend/conexion.php');
         $id_t= $_SESSION['id'];
-        $query = "SELECT * FROM actividad INNER JOIN asignar ON actividad.id_act=asignar.id_act WHERE id_tutorado= $id_t";
+        $query = "SELECT *, DATE_FORMAT(fecha_ini, '%d-%m-%Y %H:%i') as feIni, DATE_FORMAT(fecha_fin, '%d-%m-%Y %H:%i') as feFin
+        FROM actividad INNER JOIN asignar ON actividad.id_act=asignar.id_act WHERE id_tutorado= $id_t";
         $alumno = mysqli_query($con, $query);
         $numact = mysqli_num_rows($alumno);
         
     ?>
+
+    <?php if ((isset($_GET['denialPermission']) == true)) : ?>
+        <div class="modal fade" id="denied" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">ALERTA</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span>No tienes los permisos correspondientes.</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" name="Aceptar">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif?>
 
     <?php if (!($_SESSION["esAdmin"]) && $numact>0) : ?>
 
@@ -74,4 +94,9 @@ session_write_close();
 
     <?php endif; ?>
 </body>
+<script>
+    $(document).ready(function() {
+        $('#denied').modal('toggle')
+    });
+</script>
 </html>

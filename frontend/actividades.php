@@ -8,9 +8,11 @@
     include('./header.php');
     include_once('../backend/conexion.php');
     $actividades = "SELECT id_act, nom_act, desc_act, fecha_ini, fecha_fin,
-    DATE_FORMAT(fecha_ini, '%d-%m-%Y %T') as feIni, DATE_FORMAT(fecha_fin, '%d-%m-%Y %T') as feFin
+    DATE_FORMAT(fecha_ini, '%d-%m-%Y %H:%i') as feIni, DATE_FORMAT(fecha_fin, '%d-%m-%Y %H:%i') as feFin
     FROM actividad WHERE id_tutor = $_SESSION[id]";
     $act = mysqli_query($con, $actividades);
+    $hoymin = date("Y-m-d 00:00");
+    $endmin = date("Y-m-d 00:00", strtotime($hoymin."+ 1 day"));
 ?>
     <!--Fin php-->
 <body>

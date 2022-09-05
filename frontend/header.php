@@ -36,27 +36,44 @@ header('Content-Type: text/html; charset=UTF-8');
 </head>
 <header>
     <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light header-color container-bg">
-        <div class="container-fluid justify-content-center">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    
+                    <span class="navbar-brand align-self-center texto-bar me-5-md mt-2"><h3>Hola <?php echo $nombreA?>! &nbsp</h3></span>
                     <a class="navbar-brand align-self-center texto-bar me-5-md"><h1 class="letras-auto">HolaUBB<img class="img-size" src="/holaubb/assets/hello2.png"></h1></a>
-                    
-                    <a class="nav-link texto-bar align-self-center ms-5-md" id="inicio" href="/holaubb/frontend/inicio.php" title="Inicio"><img class="img-size" src="/holaubb/assets/hogar.png"></a>
-                    <?php if ($_SESSION["esAdmin"]) : ?>
-                        <a class="nav-link texto-bar align-self-center" id="actividad" href="/holaubb/frontend/actividades.php" title="Actividades"><img class="img-size" src="/holaubb/assets/activities.png"></a>
-				    <?php endif; ?>
-                    <a class="nav-link texto-bar align-self-center" id="chat" href="/holaubb/frontend/chat.php" title="Chats"><img class="img-size" src="/holaubb/assets/chat.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="perfil" href="/holaubb/frontend/perfil.php" title="Perfil"><img class="img-size" src="/holaubb/assets/profile-user.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="configurar" href="/holaubb/frontend/config.php" title="Configuración"><img class="img-size" src="/holaubb/assets/settings.png"></a>
-                    <a class="nav-link texto-bar align-self-center" id="exit" href="/holaubb/backend/login/cerrarSesion.php" title="Cerrar Sesión"><img class="img-size" src="/holaubb/assets/logout.png"></a>
-                    <form class="align-self-center" method="GET" action="/holaubb/frontend/busqueda.php">
-                        <input type="text" class=" align-self-center" placeholder="Buscar Usuario" aria-label="Buscar usuario" aria-describedby="button-addon2" name="result">
-                        <button class="btn btn-outline-secondary align-self-center" type="submit" id="button-addon2" name="search"><img class="search" src="/holaubb/assets/search.png" alt=""></button>
-                    </form>
+                    <div class="row justify-content-center">
+                        <div class="col-auto col-xs-2">
+                            <a class="nav-link texto-bar align-self-center ms-5-md" id="inicio" href="/holaubb/frontend/inicio.php" title="Inicio"><img class="img-size centrar-head" src="/holaubb/assets/hogar.png"></a>
+                            <span class="navbar-brand texto-bar text-center"><h6>Inicio</h6></span>
+                        </div>
+                        <?php if ($_SESSION["esAdmin"]) : ?>
+                            <div class="col-auto col-xs-2">
+                                <a class="nav-link texto-bar align-self-center" id="actividad" href="/holaubb/frontend/actividades.php" title="Actividades"><img class="img-size centrar-head" src="/holaubb/assets/activities.png"></a>
+                                <span class="navbar-brandtexto-bar text-center"><h6>Actividades</h6></span>
+                            </div>
+                        <?php endif; ?>
+                        <div class="col-auto col-xs-2">
+                            <a class="nav-link texto-bar align-self-center" id="chat" href="/holaubb/frontend/chat.php" title="Chats"><img class="img-size centrar-head" src="/holaubb/assets/chat.png"></a>
+                            <span class="navbar-brandtexto-bar text-center"><h6>Chat</h6></span>
+                        </div>
+                        <div class="col-auto col-xs-2">
+                            <a class="nav-link texto-bar align-self-center" id="perfil" href="/holaubb/frontend/perfil.php" title="Perfil"><img class="img-size centrar-head" src="/holaubb/assets/profile-user.png"></a>
+                            <span class="navbar-brandtexto-bar text-center"><h6>Perfil</h6></span>
+                        </div>
+                        <div class="col-auto col-xs-2">
+                            <a class="nav-link texto-bar align-self-center" id="exit" href="/holaubb/backend/login/cerrarSesion.php" title="Cerrar Sesión"><img class="img-size centrar-head" src="/holaubb/assets/logout.png"></a>
+                            <span class="navbar-brandtexto-bar text-center"><h6>Salir</h6></span>
+                        </div>
+                        <div class="col-auto col-xs-2 align-self-center">
+                            <form method="GET" action="/holaubb/frontend/busqueda.php">
+                                <input type="text" class="align-self-center" placeholder="Buscar Usuario" aria-label="Buscar usuario" aria-describedby="button-addon2" name="result">
+                                <button class="btn btn-outline-secondary align-self-center" type="submit" id="button-addon2" name="search"><img class="search" src="/holaubb/assets/search.png" alt=""></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
