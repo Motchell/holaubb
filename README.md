@@ -19,7 +19,7 @@ El proyecto web está trabajado sobre la siguiente lista de software:
 
 
 ## Configuraciones de Ejecución para Entorno de Desarrollo/Producción
-## Git
+### Git
 
 Instalar Git:
 
@@ -33,15 +33,15 @@ Clonar repo:
 
 * git clone https://github.com/Motchell/holaubb.git
 
-## Docker
+### Docker
 
 Una vez dentro de una terminal, ir al directorio raíz donde 
 se hizo el clone. Se debe ejecutar la siguiente serie de comandos para el
 funcionamiento correcto del Docker:
 
-* docker build -t holaubb
+* docker build -t holaubb .
 * docker pull mysql: 8.0
-* docker run -p 3306:3303 --name *dbName* -v *dbUrl* -e MYSQL_ROOT_PASSWORD=*dbPassword* -d mysql:8.0
+* docker run -p 3306:3306 --name *dbName* -v *dbUrl* -e MYSQL_ROOT_PASSWORD=*dbPassword* -d mysql:8.0
 
 En el directorio /var/www/html del contenedor hacer:
 
@@ -53,13 +53,34 @@ Arrancar el servicio de Apache http Server con
 
 Para ingresar a MySql y poblar:
 
-docker exec -ti basedatos /bin/bash
+* docker exec -i -t *dbName* /bin/bash
 
-* Comando para ingresar a MySql y poblar con datos
+### Maquina virtual Ubuntu LTS
 
-* docker exec -ti basedatos /bin/bash
-* Maquina virtual Ubuntu LTS
-
-situarse en la raíz e iniciar con:
+En caso de utilizarse, dirigirse al directorio donde anteriormente se clonó el repositorio e iniciar con:
 
 * php -S localhost:8080
+
+Ahora, puede ir a la url por defecto http://localhost:8080
+
+## Instalar dependencias del proyecto
+
+Instalar PHP 7.4 y Apache2
+
+* sudo apt install php-7.4 libapache2-mod-php7.4 -y
+
+Instalar MySql
+
+* apt-get install -y php7.4-mysql
+
+Reiniciar servicio Apache
+
+* service apache2 restart
+
+## Construido sobre
+* PHP 7.4
+* JavaScript
+
+## Integrantes
+* Amanda Acevedo
+* Mitchell Hidalgo
